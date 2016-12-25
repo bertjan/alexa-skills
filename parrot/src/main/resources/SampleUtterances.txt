@@ -1,0 +1,8 @@
+ParrotIntent {word_a}
+ParrotIntent {word_a} {word_b}
+ParrotIntent {word_a} {word_b} {word_c}
+ParrotIntent {word_a} {word_b} {word_c} {word_d}
+ParrotIntent {word_a} {word_b} {word_c} {word_d} {word_e}
+ParrotIntent {word_a} {word_b} {word_c} {word_d} {word_e} {word_f}
+ParrotIntent {word_a} {word_b} {word_c} {word_d} {word_e} {word_f} {word_g}
+ParrotIntent {word_a} {word_b} {word_c} {word_d} {word_e} {word_f} {word_g} {word_h}

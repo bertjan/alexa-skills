@@ -1,0 +1,40 @@
+{
+  "intents": [
+    {
+      "intent": "ParrotIntent",
+      "slots": [
+        {
+          "name": "word_a",
+          "type": "TEXT"
+        },        {
+          "name": "word_b",
+          "type": "TEXT"
+        },
+        {
+          "name": "word_c",
+          "type": "TEXT"
+        },
+        {
+          "name": "word_d",
+          "type": "TEXT"
+        },
+        {
+          "name": "word_e",
+          "type": "TEXT"
+        },
+        {
+          "name": "word_f",
+          "type": "TEXT"
+        },
+        {
+          "name": "word_g",
+          "type": "TEXT"
+        },
+        {
+          "name": "word_h",
+          "type": "TEXT"
+        }
+      ]
+    }
+  ]
+}
