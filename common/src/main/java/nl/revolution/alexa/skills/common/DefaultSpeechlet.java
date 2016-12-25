@@ -8,18 +8,29 @@ import com.amazon.speech.ui.SimpleCard;
 public class DefaultSpeechlet implements Speechlet {
 
     @Override
+    public SpeechletResponse onIntent(final IntentRequest request, final Session session) throws SpeechletException {
+        if (hasIntent(request, getIntentName())) {
+            return speechletResponse(getIntentName(), determineResponse(request));
+        } else {
+            throw new SpeechletException(getIntentName());
+        }
+    }
+
+    protected String determineResponse(final IntentRequest request) {
+        return "";
+    }
+
+    protected String getIntentName() {
+        return "default intent";
+    }
+
+    @Override
     public void onSessionStarted(SessionStartedRequest sessionStartedRequest, Session session) throws SpeechletException {
         // no default implementation
     }
 
     @Override
     public SpeechletResponse onLaunch(LaunchRequest launchRequest, Session session) throws SpeechletException {
-        // no default implementation
-        return null;
-    }
-
-    @Override
-    public SpeechletResponse onIntent(IntentRequest intentRequest, Session session) throws SpeechletException {
         // no default implementation
         return null;
     }

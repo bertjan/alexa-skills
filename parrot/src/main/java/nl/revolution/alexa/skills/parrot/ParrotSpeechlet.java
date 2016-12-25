@@ -7,20 +7,16 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.stream.Stream;
 
 public class ParrotSpeechlet extends DefaultSpeechlet {
-    private static final String INTENT_NAME = "ParrotIntent";
 
-    private static final String[] SLOTS = { "word_a", "word_b", "word_c", "word_d" };
+    private static final String[] SLOTS = { "word_a", "word_b", "word_c", "word_d", "word_e", "word_f", "word_g", "word_h" };
 
     @Override
-    public SpeechletResponse onIntent(final IntentRequest request, final Session session) throws SpeechletException {
-        if (hasIntent(request, INTENT_NAME)) {
-            return speechletResponse(INTENT_NAME, determineResponse(request));
-        } else {
-            throw new SpeechletException(INTENT_NAME);
-        }
+    protected String getIntentName() {
+        return "ParrotIntent";
     }
 
-    private String determineResponse(final IntentRequest request) {
+    @Override
+    protected String determineResponse(final IntentRequest request) {
         StringBuilder reply = new StringBuilder();
         Stream.of(SLOTS).forEach(slot -> {
             String slotStr = request.getIntent().getSlot(slot).getValue();
